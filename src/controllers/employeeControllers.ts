@@ -56,6 +56,7 @@ exports.createAnEmployee = async(req : Request, res : Response) => {
   }
   contactInfo.phone = req.body.phone; 
   contactInfo.email = req.body.email;
+  contactInfo.city = req.body.city;
   emp.contactInfo = contactInfo;
   contactInfo.employee = emp;
   try{

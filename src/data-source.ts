@@ -14,6 +14,9 @@ const AppDataSource = new DataSource({
   password: process.env.PASSWORD?.toString(),
   database: "manageDB",
   entities: [ContactInfo, Meeting, Employee, Task],
+  migrations : [
+    "src/migration/**.ts"
+  ],
   synchronize: false,
   logging: false,
 })

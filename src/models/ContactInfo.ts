@@ -15,6 +15,9 @@ export class ContactInfo {
   @Column()
   employeeId : number
 
+  @Column({nullable : true})
+  city : string
+
   @OneToOne(() => Employee, employee => employee.contactInfo, {onDelete : "CASCADE"})
   @JoinColumn()
   employee : Employee
